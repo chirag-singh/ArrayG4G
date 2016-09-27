@@ -1,0 +1,52 @@
+/* package whatever; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Ideone
+{
+	
+	static int findma(int arr[]){
+		
+		int ma=Integer.MIN_VALUE;
+		
+		for(int i=0;i<arr.length;i++){
+			if(arr[i]>ma){
+				ma=arr[i];
+			}
+		}
+		
+		return ma;
+	}
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		
+		System.out.println("Enter the Size of the Array");
+		
+		Scanner sc=new Scanner(System.in);
+		
+		int si=sc.nextInt();
+		
+		int arr[]=new int[si];
+		
+			System.out.println("Enter the Elements of Array");
+			
+			int xo=0;
+		
+		for(int i=0;i<si;i++){
+			arr[i]=sc.nextInt();
+			xo^=arr[i];
+			xo^=(i+1);
+		}
+		
+		xo^=si+1;
+		System.out.println("The Missing Integer is "+xo);
+		
+	
+		
+
+	}
+}
